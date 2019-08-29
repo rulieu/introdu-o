@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Introdução
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <p>Bem vindo, {{nome}}</p>
+  <ion-button [color]="cor" shape="round" expand="full">
+    Cor
+  </ion-button>
+  <ion-button (click)="trocarCor()" [color]="primary" shape="round" expand="full">
+    Trocar cor
+  </ion-button>
+  <ion-icon class="icon" [name] ="humor"></ion-icon>
+  <ion-item>
+    <label> Humor</label>
+
+    <ion-toggle [checked] = "checked_humor"  color="primary"
+     (ionChange) ="mudarHumor()" slot="end">
+    </ion-toggle>
+  </ion-item>
+</ion-content>
